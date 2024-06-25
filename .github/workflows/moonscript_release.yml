@@ -36,7 +36,7 @@ jobs:
         run: moonc .
 
       - name: Remove moon
-        run: rm **/*.moon
+        run: find . -type f -name "*.moon" -exec rm -fv {} \;
 
       - name: Remove github dir
         run: rm -rf .github .gitignore
